@@ -103,7 +103,7 @@ if [ "$CMD" == "install" ]; then
     sudo apt-get install -y python-software-properties
     sudo add-apt-repository ppa:nova-core/trunk
     sudo apt-get update
-    sudo apt-get install -y dnsmasq-base kpartx kvm gawk iptables ebtables wget sudo \
+    sudo apt-get install -y --force-yes dnsmasq-base kpartx kvm gawk iptables ebtables wget sudo \
         kvm libvirt-bin screen vlan curl rabbitmq-server socat unzip psmisc euca2ools
     if [ "$ENABLE_VOLUMES" == 1 ]; then
         sudo apt-get install -y lvm2 iscsitarget open-iscsi
@@ -113,7 +113,7 @@ if [ "$CMD" == "install" ]; then
     sudo modprobe kvm || true
     sudo /etc/init.d/libvirt-bin restart
     sudo modprobe nbd || true
-    sudo apt-get install -y python-mox python-ipy python-paste python-migrate \
+    sudo apt-get install -y --force-yes python-mox python-ipy python-paste python-migrate \
         python-gflags python-greenlet python-libvirt python-libxml2 python-routes \
         python-netaddr python-pastedeploy python-eventlet python-novaclient \
         python-glance python-cheetah python-carrot python-tempita \
