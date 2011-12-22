@@ -122,7 +122,7 @@ if [ "$CMD" == "install" ]; then
     rm -rf $API_DIR
     rm -rf $NOVNC_DIR
     git clone git://github.com/cloudbuilders/openstackx.git $API_DIR
-    git clone git://github.com/sleepsonthefloor/noVNC.git $NOVNC_DIR
+    git clone git://github.com/openstack/noVNC.git $NOVNC_DIR
 
     if [ "$ENABLE_DASH" == 1 ]; then
         sudo apt-get install bzr git-core python-setuptools python-dev -y
